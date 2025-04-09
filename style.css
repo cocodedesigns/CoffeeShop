@@ -10,8 +10,12 @@
     --secondary-text: #2F332D;
     --divider: #C4BEB5;
 
+    --page-title-background: linear-gradient(90deg, rgba(207,182,145,0) 0%, rgba(207,182,145,.2) 50%, rgba(207,182,145,.75) 100%);
+
     --link: #911f43;
     --link-hover: #801A1B;
+    --link-light: #f5f1f1;
+    --link-light-hover: #FFF;
     --menu-link: #1B1E18;
     --menu-link-hover: #801A1B;
 
@@ -291,6 +295,16 @@ a:hover{
 }
 
 /* Single Page */
+#site-body .page-title{ 
+    background: var(--secondary-light);
+    background: var(--page-title-background);
+    padding: 5.5rem 0.5rem;
+}
+#site-body .page-title .title{ 
+    font-size: 4.25rem;
+    margin: 0;
+    padding: 0;
+}
 
 /* Home Page */
 #hero-banner{
@@ -334,9 +348,41 @@ a:hover{
     flex: 1;
 }
 
-/* Menu Paegs */
+/* Menu Pages */
 
 /* Contact Page */
+.contact-details{ 
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+}
+.contact-details li{
+    width: calc( ( 100% / 3 ) - 20px );
+    padding: 70px 40px;
+    background-color: var(--accent);
+    color: #FFF; 
+}
+.contact-details .contact-icon{
+    font-size: 3rem;
+    padding: 0 0 1.5rem;
+}
+.contact-details .title{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.contact-details .info{ 
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.contact-details .info a{
+    color: var(--link-light);
+}
+.contact-details .info a:hover{
+    color: var(--link-light-hover);
+}
 .contact-form{ 
     padding: 50px; 
     border-radius: 30px; 
@@ -416,12 +462,17 @@ a:hover{
         flex-direction: column;
         align-items: center;
     }
-
+    #site-header #logo{ 
+        padding: 0 0 1.5rem;
+    }
 }
 @media only screen and (max-width: 800px){
     #site-header .container{
         flex-direction: column;
         align-items: center;
+    }
+    #site-header #logo{ 
+        padding: 0 0 1.5rem;
     }
     #site-header #site-nav .menu{
         flex-direction: column;
