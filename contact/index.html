@@ -4,8 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get in Touch | The Cosy Crit</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css">
 </head>
 <body>
-    
+    <header id="site-header">
+        <div class="container">
+            <figure id="logo">
+                <a href="/" class="home-link">
+                    <img src="/images/logo.svg" alt="The Cosy Crit - Click to go home" />
+                </a>
+            </figure> <!-- #logo -->
+            
+            <nav id="site-nav">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="/about/" class="link">About Us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/drinks/" class="link">Drinks Menu</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/pastries/" class="link">Pastries Menu</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/contact/" class="link selected">Get in Touch</a>
+                    </li>
+                </ul> <!-- .menu -->
+            </nav> <!-- #site-nav -->
+        </div>
+    </header>
+
+    <main id="site-body">
+        <figure class="page-title">
+            <div class="container">
+                <h1 class="title">Get in Touch</h1>
+            </div>
+        </figure>
+
+        <article class="body-text">
+            <div class="container">
+                <aside class="details">
+                    <ul class="contact-details">
+                        <li class="method telephone">
+                            <i class="fa-solid fa-telephone"></i>
+                            <div class="data">
+                                <h6 class="tile">Telephone</h6>
+                                <p class="info"><a href="tel:+441614960420">0161 496 0420</a></p>
+                            </div>
+                        </li>
+
+                        <li class="method email">
+                            <i class="fa-solid fa-at"></i>
+                            <div class="data">
+                                <h6 class="tile">Email</h6>
+                                <p class="info"><a href="mailto:hithere@thecosycrit.com">hithere@thecosycrit.com</a></p>
+                            </div>
+                        </li>
+
+                        <li class="method messengers">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <div class="data">
+                                <h6 class="tile">Message us on</h6>
+                                <p class="info">
+                                    <a href="https://wa.me/+447700900420" class="msg whatsapp">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        <span class="label">WhatsApp</span>
+                                    </a>
+
+                                    <a href="https://m.me/" class="msg facebook-messenger">
+                                        <i class="fa-brands fa-facebook-messenger"></i>
+                                        <span class="label">Facebook Messenger</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul> <!-- .contact-details -->
+                </aside> <!-- .details -->
+
+                <form action="" class="contact-form" method="POST">
+                    <div class="row form-row fields-two name">
+                        <div class="field first-name">
+                            <label class="label" for="firstname">First Name:</label>
+                            <input type="text" name="firstname" id="firstname" class="form-field text-field" placeholder="First Name" />
+                        </div>
+                        <div class="field last-name">
+                            <label class="label" for="lastname">Last Name:</label>
+                            <input type="text" name="lastname" id="lastname" class="form-field text-field" placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div class="row form-row fields-two contact">
+                        <div class="field email">
+                            <label class="label" for="email">Email:</label>
+                            <input type="email" name="email" id="email" class="form-field text-field" placeholder="me@email.com" />
+                        </div>
+                        <div class="field telno">
+                            <label class="label" for="telno">Telephone number:</label>
+                            <input type="text" name="telno" id="telno" class="form-field text-field intlTelInput" placeholder="+44" />
+                        </div>
+                    </div>
+                    <div class="row form-row field-one message">
+                        <div class="field msg">
+                            <label class="label" for="msg">Message:</label>
+                            <textarea name="msg" id="msg" class="form-field textarea-field"></textarea>
+                        </div>
+                    </div>
+                    <div class="row form-row field-one captcha">
+                        <div class="field captcha-field">
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAABHebg3ThHpZt0cw" data-theme="light" data-size="flexible"></div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="form-field button-field primary-button" name="submitform" id="submitform">
+                            <span class="button-label">Submit Form</span>
+                        </button>
+                    </div>
+                </form> <!-- .contact-form -->
+            </div>
+        </article>
+    </main>
+
+    <footer id="site-footer">
+        <div class="container">
+            <div id="socials">
+                <ul class="networks">
+                    <li class="network">
+                        <a href="https://www.facebook.com/" class="link facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span class="label">Facebook</span>
+                        </a>
+                    </li>
+
+                    <li class="network">
+                        <a href="https://www.instagram.com/" class="link instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span class="label">Instagram</span>
+                        </a>
+                    </li>
+
+                    <li class="network">
+                        <a href="https://bsky.app/" class="link bluesky">
+                            <i class="fa-brands fa-bluesky"></i>
+                            <span class="label">BlueSky</span>
+                        </a>
+                    </li>
+                    <li class="network">
+                        <a href="https://www.twitch.tv/" class="link twitch">
+                            <i class="fa-brands fa-twitch"></i>
+                            <span class="label">Twitch</span>
+                        </a>
+                    </li>
+                </ul> <!-- .networks -->
+            </div> <!-- #socials -->
+
+            <div id="copyright">
+                <p>Copyright &copy; 2025 The Cosy Crit. All rights reserved. <a href="/privacy/">Privacy Policy</a></p>
+                <p>Powered by <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://wearecodenation.com">Code Nation</a>. Designed with <i class="heart fa-solid fa-heart"></i>. Created by <a href="https://nathanhawkes.dev/">Nathan Hawkes</a>.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
