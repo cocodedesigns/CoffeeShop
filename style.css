@@ -10,8 +10,12 @@
     --secondary-text: #2F332D;
     --divider: #C4BEB5;
 
+    --page-title-background: linear-gradient(90deg, rgba(207,182,145,0) 0%, rgba(207,182,145,.2) 50%, rgba(207,182,145,.75) 100%);
+
     --link: #911f43;
     --link-hover: #801A1B;
+    --link-light: #f5f1f1;
+    --link-light-hover: #FFF;
     --menu-link: #1B1E18;
     --menu-link-hover: #801A1B;
 
@@ -147,6 +151,7 @@ a:hover{
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
+.page-container
 
 .bg-primary{
     background-color: var(--primary);
@@ -291,6 +296,16 @@ a:hover{
 }
 
 /* Single Page */
+#site-body .page-title{ 
+    background: var(--secondary-light);
+    background: var(--page-title-background);
+    padding: 5.5rem 0.5rem;
+}
+#site-body .page-title .title{ 
+    font-size: 4.25rem;
+    margin: 0;
+    padding: 0;
+}
 
 /* Home Page */
 #hero-banner{
@@ -334,15 +349,144 @@ a:hover{
     flex: 1;
 }
 
-/* Menu Paegs */
+/* Menu Pages */
+.menu-page .menu-list .menu{
+    display: flex;
+    gap: 50px 30px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu-page .menu-list .menu .item{
+    width: calc( ( 100% / 3 ) - 20px );
+}
+.menu-page .menu-list .menu .item .image{
+    border: solid 5px #FFF;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.45);
+    position: relative;
+    padding-bottom: 62.5%;
+    overflow: hidden;
+    margin: 0 0 1.5rem;
+}
+.menu-page .menu-list .menu .item img{ 
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .2s ease;
+    transform-origin: center;
+    transform: scale(1);
+}
+.menu-page .menu-list .menu .item:hover img{
+    transform: scale(1.2);
+}
+.menu-page .menu-list .menu .item .data{
+    padding: 0 1rem;
+}
+.menu-page .menu-list .menu .item .item-head{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-page .menu-list .menu .item .item-name{
+    font-size: 1.6rem;
+    color: var(--primary);
+    font-weight: 400;
+    flex: 1;
+}
+.menu-page .menu-list .menu .item .price{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 15px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #FFF;
+    background-color: var(--primary);
+}
+.menu-page .menu-list .menu .item .product-name{
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--secondary-text);
+}
+.menu-page .menu-list .menu .item .suitable-for{
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    display: flex;
+    gap: 10px 8px;
+}
+.menu-page .menu-list .menu .item .suitable-for li{
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    padding: 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+.menu-page .menu-list .menu .item .suitable-for .vegan{
+    background-color: #b3f19c;
+}
+.menu-page .menu-list .menu .item .suitable-for .vegetarian{
+    background-color: #9bd885;
+}
+.menu-page .menu-list .menu .item .suitable-for .gluten-free{
+    background-color: #f1e49c;
+}
 
 /* Contact Page */
+.contact-details{ 
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 0 3rem; 
+    padding: 0;
+    list-style: none;
+}
+.contact-details li{
+    width: calc( ( 100% / 3 ) - 20px );
+    padding: 70px 40px;
+    background-color: var(--accent);
+    color: #FFF; 
+}
+.contact-details .contact-icon{
+    font-size: 3rem;
+    padding: 0 0 1.5rem;
+}
+.contact-details .title{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.contact-details .info{ 
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.contact-details .info a{
+    color: var(--link-light);
+}
+.contact-details .info a:hover{
+    color: var(--link-light-hover);
+}
 .contact-form{ 
     padding: 50px; 
     border-radius: 30px; 
     background-color: #FFF; 
     margin: 0 auto; 
     max-width: 1100px 
+}
+.contact-form .fields-two{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.contact-form .fields-two .field{
+    width: calc( 50% - 15px ); 
 }
 .contact-form .label{ 
     font-family: var(--heading-typography);
@@ -416,12 +560,17 @@ a:hover{
         flex-direction: column;
         align-items: center;
     }
-
+    #site-header #logo{ 
+        padding: 0 0 1.5rem;
+    }
 }
 @media only screen and (max-width: 800px){
     #site-header .container{
         flex-direction: column;
         align-items: center;
+    }
+    #site-header #logo{ 
+        padding: 0 0 1.5rem;
     }
     #site-header #site-nav .menu{
         flex-direction: column;
