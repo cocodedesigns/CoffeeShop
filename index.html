@@ -12,9 +12,10 @@
         <div class="container">
             <figure id="logo">
                 <a href="/" class="home-link">
-                    <img src="logo.svg" alt="The Cosy Crit - Click to go home" />
+                    <img src="/images/logo.svg" alt="The Cosy Crit - Click to go home" />
                 </a>
-            </figure>
+            </figure> <!-- #logo -->
+            
             <nav id="site-nav">
                 <ul class="menu">
                     <li class="menu-item">
@@ -29,30 +30,55 @@
                     <li class="menu-item">
                         <a href="/contact/" class="link">Get in Touch</a>
                     </li>
-                </ul>
-            </nav>
+                </ul> <!-- .menu -->
+            </nav> <!-- #site-nav -->
         </div>
     </header>
+
     <main id="site-body">
         <section id="hero-banner">
             <div class="container">
                 <h1 class="hero-title title">Welcome to the Cosy Crit!</h1>
                 <p class="hero-subtitle">[DESCRIPTION FOR THE COSY CRIT]</p>
-            </div>
-        </section>
-        <section id="page-content" class="container">
-            <article class="intro"></article>
-            <article class="menus">
-                <figure class="menu drinks"></figure>
-                <figure class="menu pastries"></figure>
+            </div> <!-- .container -->
+        </section> <!-- #hero-banner -->
+
+        <section id="page-content" class="container page-container">
+            <article class="intro">
+                [WELCOME CONTENT]
             </article>
-            <article class="gaming cta">
-                <figure class="image">
-                    <img src="/images/cta-banner-gaming.jpg">
+
+            <article class="intro">
+                <figure class="image coffee">
+                    <img src="/images/stock/coffee-home.jpg" alt="Coffee" />
                 </figure>
-                <div class="content"></div>
+
+                <div class="content">
+                    [INTRO CONTENT]
+                </div>
             </article>
+
+            <article class="menus">
+                <figure class="menu drinks bg-primary-dark fg-white">
+                    [DRINKS MENU]
+                </figure> <!-- .menu.drinks -->
+
+                <figure class="menu pastries bg-secondary fg-white">
+                    [PASTRIES MENU]
+                </figure> <!-- .menu.passtries -->
+            </article> <!-- .menus -->
+
+            <article class="gaming cta bg-primary fg-white">
+                <figure class="image">
+                    <img src="/images/stock/cta-banner-gaming.jpg" alt="CTA Gaming">
+                </figure>
+                <div class="content">
+                    [CTA CONTENT]
+                </div>
+            </article> <!-- .gaming.cta -->
+
             <article class="map"></article>
+
             <article class="contact">
                 <aside class="details">
                     <ul class="contact-details">
@@ -63,6 +89,7 @@
                                 <p class="info"><a href="tel:+441614960420">0161 496 0420</a></p>
                             </div>
                         </li>
+
                         <li class="method email">
                             <i class="fa-solid fa-at"></i>
                             <div class="data">
@@ -70,6 +97,7 @@
                                 <p class="info"><a href="mailto:hithere@thecosycrit.com">hithere@thecosycrit.com</a></p>
                             </div>
                         </li>
+
                         <li class="method messengers">
                             <i class="fa-solid fa-comment-dots"></i>
                             <div class="data">
@@ -79,6 +107,7 @@
                                         <i class="fa-brands fa-whatsapp"></i>
                                         <span class="label">WhatsApp</span>
                                     </a>
+
                                     <a href="https://m.me/" class="msg facebook-messenger">
                                         <i class="fa-brands fa-facebook-messenger"></i>
                                         <span class="label">Facebook Messenger</span>
@@ -86,12 +115,16 @@
                                 </p>
                             </div>
                         </li>
-                    </ul>
-                </aside>
-                <form action="" class="contact-form"></form>
+                    </ul> <!-- .contact-details -->
+                </aside> <!-- .details -->
+
+                <form action="" class="contact-form">
+                    [CONTACT FORM]
+                </form> <!-- .contact-form -->
             </article>
         </section>
     </main>
+
     <footer id="site-footer">
         <div class="container">
             <div id="socials">
@@ -102,12 +135,14 @@
                             <span class="label">Facebook</span>
                         </a>
                     </li>
+
                     <li class="network">
                         <a href="https://www.instagram.com/" class="link instagram">
                             <i class="fa-brands fa-instagram"></i>
                             <span class="label">Instagram</span>
                         </a>
                     </li>
+
                     <li class="network">
                         <a href="https://bsky.app/" class="link bluesky">
                             <i class="fa-brands fa-bluesky"></i>
@@ -116,12 +151,13 @@
                     </li>
                     <li class="network">
                         <a href="https://www.twitch.tv/" class="link twitch">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <span class="label">Facebook</span>
+                            <i class="fa-brands fa-twitch"></i>
+                            <span class="label">Twitch</span>
                         </a>
                     </li>
-                </ul>
-            </div>
+                </ul> <!-- .networks -->
+            </div> <!-- #socials -->
+
             <div id="copyright">
                 <p>Copyright &copy; 2025 The Cosy Crit. All rights reserved. <a href="/privacy/">Privacy Policy</a></p>
                 <p>Powered by <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://wearecodenation.com">Code Nation</a>. Designed with <i class="heart fa-solid fa-heart"></i>. Created by <a href="https://nathanhawkes.dev/">Nathan Hawkes</a>.</p>
