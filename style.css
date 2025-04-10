@@ -709,6 +709,9 @@ a:hover{
     .front-page .intro{
         flex-direction: column;
     }
+    .front-page .intro .image{
+        width: 65%;
+    }
     .front-page .menus{
         flex-direction: column;
     }
