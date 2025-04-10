@@ -769,7 +769,7 @@ a:hover{
     }
     #hero-banner{
         height: unset;
-        padding-top: 185px;
+        padding: 185px 2.35rem 3rem;
     }
     #hero-banner .hero-title{
         font-size: 2.6rem;
@@ -790,6 +790,9 @@ a:hover{
     .front-page .menus .menu{
         width: 100%;
         flex-direction: column;
+    }
+    .cta .content{
+        padding: 3rem 2rem 3.5rem;
     }
     .cta.content-right{
         flex-direction: column;
