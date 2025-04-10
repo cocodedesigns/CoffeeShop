@@ -39,12 +39,14 @@
     </header>
 
     <main id="site-body">
-        <section id="hero-banner">
-            <div class="container">
-                <h1 class="hero-title title">Welcome to The Cosy Crit!</h1>
-                <p class="hero-subtitle">Combining caffeine and adventuring since 2025.</p>
-            </div> <!-- .container -->
-        </section> <!-- #hero-banner -->
+        <div class="container">
+            <section id="hero-banner">
+                <div class="hero-wrap">
+                    <h1 class="hero-title title">Welcome to The Cosy Crit!</h1>
+                    <p class="hero-subtitle">Combining caffeine and adventuring since 2025.</p>
+                </div> <!-- .hero-wrap -->
+            </section> <!-- #hero-banner -->
+        </div>
 
         <section id="page-content" class="container page-container front-page">
             <article class="welcome">
@@ -68,34 +70,58 @@
             </article>
 
             <article class="menus">
-                <figure class="menu drinks bg-primary-dark fg-white">
-                    [DRINKS MENU]
+                <figure class="menu drinks">
+                    <figure class="image">
+                        <img src="/images/drinks-menu.png" alt="Fuel your next quest with our luxury coffees and lattes" />
+                    </figure>
+                    <div class="content">
+                        <h2 class="menu-title">Fuel Your Next Quest</h2>
+                        <p>From critical cold brews to spellbinding matcha, our drinks menu has everything to power adventurers of all alignments. Take a peek and pick your potion!</p>
+                        <a href="/drinks/" class="menu-button">View menu</a>
+                    </div>
                 </figure> <!-- .menu.drinks -->
 
-                <figure class="menu pastries bg-secondary fg-white">
-                    [PASTRIES MENU]
+                <figure class="menu pastries">
+                    <figure class="image">
+                        <img src="/images/bakery-menu.png" alt="Boost your sweetness proficiency with our freshly baked pastries">
+                    </figure>
+                    <div class="content">
+                        <h2 class="menu-title">Roll for Sweetness</h2>
+                        <p>Whether you’re after a buttery croissant or a cinnamon roll worthy of bardic inspiration, our pastries are baked daily and full of flavour. Go on—tempt fate.</p>
+                        <a href="/pastries/" class="menu-button">View menu</a>
+                    </div>
                 </figure> <!-- .menu.passtries -->
             </article> <!-- .menus -->
 
-            <article class="gaming cta bg-primary fg-white">
+            <article class="gaming cta content-right bg-primary fg-white">
                 <figure class="image">
                     <img src="/images/stock/cta-banner-gaming.jpg" alt="CTA Gaming">
                 </figure>
                 <div class="content">
-                    <h2>Ready to roll?</h2>
+                    <h2>Is it your turn to roll?</h2>
                     <p>Our gaming nights are open to adventurers of all levels—whether you're a seasoned DM or still figuring out which dice is the d12. From chaotic one-shots to epic campaigns, there's always a seat at the table.</p>
                     <p>Spots fill up fast, so don’t miss your initiative!</p>
                     <a href="/contact/" class="cta-button">Enquire within</a>
                 </div>
             </article> <!-- .gaming.cta -->
 
-            <article class="map"></article>
+            <article class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.199409194781!2d-2.2426316840786536!3d53.48075907999861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1d6ecbff3d7%3A0x7b5f16bbef9f472b!2sManchester%20City%20Centre!5e0!3m2!1sen!2suk!4v1712739465555!5m2!1sen!2suk" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </article>
 
             <article class="contact">
                 <aside class="details">
                     <ul class="contact-details">
                         <li class="method telephone">
-                            <i class="fa-solid fa-telephone"></i>
+                            <i class="contact-icon fa-solid fa-phone-volume"></i>
                             <div class="data">
                                 <h6 class="title">Telephone</h6>
                                 <p class="info"><a href="tel:+441614960420">0161 496 0420</a></p>
@@ -103,7 +129,7 @@
                         </li>
 
                         <li class="method email">
-                            <i class="fa-solid fa-at"></i>
+                            <i class="contact-icon fa-solid fa-at"></i>
                             <div class="data">
                                 <h6 class="title">Email</h6>
                                 <p class="info"><a href="mailto:hithere@thecosycrit.com">hithere@thecosycrit.com</a></p>
@@ -111,17 +137,17 @@
                         </li>
 
                         <li class="method messengers">
-                            <i class="fa-solid fa-comment-dots"></i>
+                            <i class="contact-icon fa-solid fa-comment-dots"></i>
                             <div class="data">
                                 <h6 class="title">Message us on</h6>
                                 <p class="info">
                                     <a href="https://wa.me/+447700900420" class="msg whatsapp">
-                                        <i class="fa-brands fa-whatsapp"></i>
+                                        <i class="network-icon fa-brands fa-whatsapp"></i>
                                         <span class="label">WhatsApp</span>
                                     </a>
 
                                     <a href="https://m.me/" class="msg facebook-messenger">
-                                        <i class="fa-brands fa-facebook-messenger"></i>
+                                        <i class="network-icon fa-brands fa-facebook-messenger"></i>
                                         <span class="label">Facebook Messenger</span>
                                     </a>
                                 </p>
