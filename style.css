@@ -514,9 +514,12 @@ a:hover{
     font-size: 3rem;
     padding: 0 0 1.5rem;
 }
-.contact-details .title{
-    font-size: 1rem;
+.contact-details .contact-title{
+    font-size: 1.15rem;
     font-weight: 400;
+    font-family: var(--heading-typography);
+    padding: 0 0 1rem;
+    line-height: 1.6;
 }
 .contact-details .info{ 
     font-size: 1.3rem;
