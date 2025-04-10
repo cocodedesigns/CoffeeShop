@@ -223,6 +223,9 @@ a:hover{
 #site-header #logo{
     max-width: 250px;
 }
+#site-header #logo a{
+    display: block;
+}
 #site-header #logo img{
     width: 100%;
 }
@@ -675,6 +678,18 @@ a:hover{
 
 /* Responsive */
 @media only screen and (max-width: 1024px) and (min-width: 801px){
+    h1{
+        font-size: 3.1rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    h4, h5, h6{
+        font-size: 1.4rem;
+    }
     #site-header .container{ 
         flex-direction: column;
         align-items: center;
@@ -682,8 +697,55 @@ a:hover{
     #site-header #logo{ 
         padding: 0 0 1.5rem;
     }
+    #site-body .page-title .title{
+        font-size: 3.5rem;
+    }
+    #hero-banner .hero-title{
+        font-size: 3rem;
+    }
+    #hero-banner .hero-subtitle{
+        font-size: 1.3rem;
+    }
+    .front-page .intro{
+        flex-direction: column;
+    }
+    .front-page .menus{
+        flex-direction: column;
+    }
+    .front-page .menus .menu{
+        width: 100%;
+    }
+    .cta.content-right{
+        flex-direction: column;
+    }
+    .cta.content-right .image{
+        padding-bottom: 57.6%;
+        width: 100%;
+    }
+    .contact-details{
+        flex-direction: column;
+    }
+    .contact-details li{
+        width: 100%;
+        padding: 48px;
+    }
+    .menu-page .menu-list .menu .item{
+        width: calc( 50% - 15px );
+    }
 }
 @media only screen and (max-width: 800px){
+    h1{
+        font-size: 2.75rem;
+    }
+    h2{
+        font-size: 2.35rem;
+    }
+    h3{
+        font-size: 1.8rem;
+    }
+    h4, h5, h6{
+        font-size: 1rem;
+    }
     #site-header .container{
         flex-direction: column;
         align-items: center;
@@ -691,8 +753,69 @@ a:hover{
     #site-header #logo{ 
         padding: 0 0 1.5rem;
     }
+    #site-header #site-nav{
+        width: 100%;
+    }
     #site-header #site-nav .menu{
         flex-direction: column;
         text-align: center;
+        width: 100%;
+    }
+    #site-body .page-title .title{
+        font-size: 3rem;
+    }
+    #hero-banner{
+        height: unset;
+        padding-top: 185px;
+    }
+    #hero-banner .hero-title{
+        font-size: 2.6rem;
+    }
+    #hero-banner .hero-subtitle{
+        font-size: 1.1rem;
+    }
+    .front-page .intro{
+        flex-direction: column;
+    }
+    .front-page .intro .image{
+        width: 100%;
+    }
+    .front-page .menus{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .front-page .menus .menu{
+        width: 100%;
+        flex-direction: column;
+    }
+    .cta.content-right{
+        flex-direction: column;
+    }
+    .cta.content-right .image{
+        padding-bottom: 57.6%;
+        width: 100%;
+    }
+    .contact-details{
+        flex-direction: column;
+    }
+    .contact-details li{
+        width: 100%;
+        padding: 48px;
+    }
+    .menu-page .menu-list .menu .item{
+        width: 100%;
+    }
+    .contact-form{
+        padding: 40px 28px;
+    }
+    .contact-form .fields-two{
+        flex-direction: column;
+        gap: 0;
+    }
+    .contact-form .fields-two .field{
+        width: 100%;
+    }
+    .contact-details .contact-icon{
+        font-size: 2.3rem;
     }
 }
