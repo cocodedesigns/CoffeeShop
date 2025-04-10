@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get in Touch | The Cosy Crit</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css">
+
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js"></script>
+    
+    <!-- IntlTelInput -->
+    <link rel="stylesheet" href="/css/intlTelInput.min.css" />
+    <script src="/js/intlTelInput/intlTelInput.min.js"></script>
+
+    <!-- Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+
+    <!-- Cookie Banner -->
+    <link rel="stylesheet" href="/css/silktide-consent-manager.css" />
+    <script src="/js/silktide-consent-manager.js"></script>
 </head>
 <body>
     <header id="site-header">
@@ -95,6 +109,16 @@
                 </aside> <!-- .details -->
 
                 <form action="" class="contact-form" method="POST">
+                    <div id="form-notice" class="notice">
+                        <div class="alert {{ ALERT_CLASS }}">
+                            <div class="icon">
+                                <i class="{{ ICON_CLASS }}"></i>
+                            </div>
+                            <div class="text">
+                                <p>{{ ALERT_TEXT }}</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row form-row fields-two name">
                         <div class="field first-name">
                             <label class="label" for="firstname">First Name:</label>
@@ -141,6 +165,75 @@
             </div>
         </article>
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".contact-form").addEventListener("submit", function (e) {
+                e.preventDefault();
+                let formData = new FormData(this);
+                fetch("/process/contact.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const formNotice = document.getElementById("form-notice");
+                    const alertDiv = formNotice.querySelector(".alert");
+                    const iconDiv = alertDiv.querySelector(".icon");
+                    const textDiv = alertDiv.querySelector(".text p");
+                    if (data.success) {
+                        // Update for success
+                        alertDiv.classList.add("success");
+                        alertDiv.classList.remove("error");
+                        iconDiv.innerHTML = '<i class="fa-solid fa-check"></i>';
+                        textDiv.textContent = data.message || "Form submitted successfully!";
+                        formNotice.style.display = "block"; // Show the notice
+                        document.querySelector(".form").reset();
+                    } else {
+                        // Update for error
+                        alertDiv.classList.add("error");
+                        alertDiv.classList.remove("success");
+                        iconDiv.innerHTML = '<i class="fa-solid fa-triangle-exclamation submitted"></i>';
+                        textDiv.textContent = data.message || "An error occurred. Please try again.";
+                        formNotice.style.display = "block"; // Show the notice
+                    }
+                    // Fade out after 7 seconds
+                    setTimeout(function() {
+                        formNotice.style.opacity = "0";
+                        setTimeout(function() {
+                            formNotice.style.display = "none"; // Hide after fade
+                        }, 1000); // Wait for the transition to complete
+                    }, 7000); // 7 seconds delay before fade
+                })
+                .catch(error => {
+                    // Update for error
+                    const formNotice = document.getElementById("form-notice");
+                    const alertDiv = formNotice.querySelector(".alert");
+                    const iconDiv = alertDiv.querySelector(".icon");
+                    const textDiv = alertDiv.querySelector(".text p");
+                    alertDiv.classList.add("error");
+                    alertDiv.classList.remove("success");
+                    iconDiv.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+                    textDiv.textContent = "An error occurred. Please try again.";
+                    formNotice.style.display = "block"; // Show the notice
+                    console.error(error);
+                    // Fade out after 7 seconds
+                    setTimeout(function() {
+                        formNotice.style.opacity = "0";
+                        setTimeout(function() {
+                            formNotice.style.display = "none"; // Hide after fade
+                        }, 1000); // Wait for the transition to complete
+                    }, 7000); // 7 seconds delay before fade
+                });
+            });
+        });
+    </script>
+    <script>
+        const input = document.querySelector(".intlTelInput");
+        window.intlTelInput(input, {
+            initialCountry: "GB",
+            loadUtils: () => import("/js/intlTelInput/utils.js"),
+        });
+    </script>
 
     <footer id="site-footer">
         <div class="container">
