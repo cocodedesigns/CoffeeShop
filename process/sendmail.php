@@ -23,17 +23,12 @@ function validate_message($message) {
     return strlen($message) > 5;
 }
 
-define('SEND_MAIL', 'send');
+define('SEND_MAIL', 'sendmail');
 define('SEND_FROM', 'no-reply@thebardsgarage.dev');
 define('SEND_TO', 'nathan@thewpbard.dev');
 define('SEND_NAME', 'The Cosy Crit');
 
 define('TURNSTILE_SECRET', '0x4AAAAAABHebtGzn5oH8oX4kTbuhAyp9Ms');
-
-define('BREVO_API', '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');
-
-// Define constants for HubSpot API key 
-define('HUBSPOT_API_KEY', 'pat-na1-0f9558ee-ad7c-4588-8949-4954388e788b'); // Replace with your HubSpot API key
 
 /**
  * Sends the email using Brevo (formerly Sendinblue) via cURL or PHP mail() as a fallback.
