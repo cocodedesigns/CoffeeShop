@@ -11,7 +11,7 @@
     --divider: #C4BEB5;
 
     --page-title-background: linear-gradient(90deg, rgba(207,182,145,0) 0%, rgba(207,182,145,.2) 50%, rgba(207,182,145,.75) 100%);
-    
+
     --success: #cce5d4;
     --success-dark: #165016;
     --info: #cce4f6;
@@ -28,67 +28,54 @@
     --menu-link: #1B1E18;
     --menu-link-hover: #801A1B;
 
-    --primary-typography: 'Montserrat', Arial, Helvetica, sans-serif;
-    --heading-typography: 'Playfair Display', 'Times New Roman', Times, serif;
+    --primary-typography: 'Noto Sans', Arial, Helvetica, sans-serif;
+    --heading-typography: 'Cormorant Unicase', 'Times New Roman', Times, serif;
 }
 
-/* Montserrat - Google Fonts */
+/* Noto Sans - Google Fonts */
+/* noto-sans-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
+    font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/montserrat/montserrat-v29-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../fonts/noto-sans/noto-sans-v39-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
+    font-family: 'Noto Sans';
     font-style: italic;
     font-weight: 400;
-    src: url('../fonts/montserrat/montserrat-v29-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../fonts/noto-sans/noto-sans-v39-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
+    font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/montserrat/montserrat-v29-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../fonts/noto-sans/noto-sans-v39-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
+    font-family: 'Noto Sans';
     font-style: italic;
     font-weight: 700;
-    src: url('../fonts/montserrat/montserrat-v29-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../fonts/noto-sans/noto-sans-v39-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* Playfair Display - Google Fonts */
+/* Cormorant Unicase - Google Fonts */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Playfair Display';
+    font-family: 'Cormorant Unicase';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/playfair-display/playfair-display-v37-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../fonts/cormorant-unicase/cormorant-unicase-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Playfair Display';
-    font-style: italic;
-    font-weight: 400;
-    src: url('../fonts/playfair-display/playfair-display-v37-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Playfair Display';
+    font-family: 'Cormorant Unicase';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/playfair-display/playfair-display-v37-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Playfair Display';
-    font-style: italic;
-    font-weight: 700;
-    src: url('../fonts/playfair-display/playfair-display-v37-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../fonts/cormorant-unicase/cormorant-unicase-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 *{
@@ -128,7 +115,7 @@ h4, h5, h6{
 }
 p, li{
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.6;
     padding: 0 0 0.75rem;
 }
 strong, b{
