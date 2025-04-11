@@ -171,6 +171,16 @@
                 </aside> <!-- .details -->
 
                 <form action="" class="contact-form" method="POST">
+                    <div id="form-notice" class="notice">
+                        <div class="alert {{ ALERT_CLASS }}">
+                            <div class="icon">
+                                <i class="{{ ICON_CLASS }}"></i>
+                            </div>
+                            <div class="text">
+                                <p>{{ ALERT_TEXT }}</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row form-row fields-two name">
                         <div class="field first-name">
                             <label class="label" for="firstname">First Name:</label>
