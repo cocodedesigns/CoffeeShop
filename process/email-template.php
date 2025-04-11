@@ -29,7 +29,7 @@ function write_email($emailData, $content, $email = 'contact'){
         <head>
             <meta charset='UTF-8'>
             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-            <title>Re-flective</title>
+            <title>The Cosy Crit</title>
             <style>
                 body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
                 p { padding: 10px 0; margin: 0; }
@@ -69,7 +69,7 @@ function write_email($emailData, $content, $email = 'contact'){
                 </div>
             </div>
             <div class='email-footer'>
-                <p>&copy; 2025 The Cosy Criy. All rights reserved.</p>
+                <p>&copy; 2025 The Cosy Crit. All rights reserved.</p>
             </div>
         </body>
         </html>
