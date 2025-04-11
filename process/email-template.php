@@ -50,7 +50,7 @@ function write_email($emailData, $content, $email = 'contact'){
         </head>
         <body>
             <div class='email-header'>
-                <img src='https://reflective-11ty.cocodestaging.site/images/logos/email-logo.png' alt='Re-flective'>
+                <img src='https://thecosycrit-plus.thebardsgarage.dev/images/email-logo.png' alt='The Cosy Crit'>
             </div>
             <div class='email-container'>
                 <div class='email-body'>
@@ -69,7 +69,7 @@ function write_email($emailData, $content, $email = 'contact'){
                 </div>
             </div>
             <div class='email-footer'>
-                <p>&copy; 2025 Re-flective. All rights reserved.</p>
+                <p>&copy; 2025 The Cosy Criy. All rights reserved.</p>
             </div>
         </body>
         </html>
